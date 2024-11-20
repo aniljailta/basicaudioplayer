@@ -73,12 +73,6 @@ npm run android
 yarn android
 ```
 
-## Usage
-
-1. Place your audio file in the assets directory
-2. Update the audio file path in `App.tsx`
-3. Place your transcript JSON file in the assets directory
-4. Update the transcript file path in `App.tsx`
 
 ## Contributing
 
