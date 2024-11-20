@@ -28,15 +28,9 @@ const AppContent = () => {
 
   useEffect(() => {
     try {
-      if (Platform.OS === 'android') {
-        SoundPlayer.playSoundFile('example_audio', 'mp3');
-
-        SoundPlayer.setVolume(1);
-        SoundPlayer.pause();
-      } else {
-        SoundPlayer.loadSoundFile('example_audio', 'mp3');
-      }
-
+      SoundPlayer.playSoundFile('example_audio', 'mp3');
+      SoundPlayer.setVolume(1);
+      SoundPlayer.pause();
       SoundPlayer.getInfo().then(info => {
         setDuration(info.duration);
       });
