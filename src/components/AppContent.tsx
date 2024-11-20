@@ -28,15 +28,12 @@ const AppContent = () => {
 
   useEffect(() => {
     try {
-      // Platform-specific audio loading
       if (Platform.OS === 'android') {
-        // For Android, load from raw folder without extension
         SoundPlayer.playSoundFile('example_audio', 'mp3');
-        // Immediately pause since we just want to load it
+
         SoundPlayer.setVolume(1);
         SoundPlayer.pause();
       } else {
-        // For iOS, load as before
         SoundPlayer.loadSoundFile('example_audio', 'mp3');
       }
 
