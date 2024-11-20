@@ -15,7 +15,6 @@ A React Native application that plays audio while highlighting the corresponding
 - Node.js (v14 or later)
 - npm or yarn
 - React Native CLI
-- Expo CLI (for development)
 - Android Studio (for Android development)
 - Xcode (for iOS development, macOS only)
 
