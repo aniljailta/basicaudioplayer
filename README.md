@@ -1,79 +1,94 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Audio Transcript Player
 
-# Getting Started
+A React Native application that plays audio while highlighting the corresponding transcript text. This app supports multiple speakers and features playback controls including play/pause, forward, and rewind functionality.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Features
 
-## Step 1: Start the Metro Server
+- Play/pause audio playback
+- Navigate between phrases (forward/rewind)
+- Highlight current phrase during playback
+- Support for multiple speakers
+- Synchronized transcript display
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Prerequisites
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- Node.js (v14 or later)
+- npm or yarn
+- React Native CLI
+- Expo CLI (for development)
+- Android Studio (for Android development)
+- Xcode (for iOS development, macOS only)
+
+## Installation
+
+1. Clone the repository:
 
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+git clone <repository-url>
+cd BasicAudioPlayer
 ```
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+2. Install dependencies:
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+npm install
+# or
+yarn install
 ```
 
-### For iOS
+3. Install required dependencies for the project:
 
 ```bash
-# using npm
+npx expo install expo-av @reduxjs/toolkit react-redux react-native-vector-icons react-native-sound-player
+```
+
+## Running the Application
+
+### iOS Version
+
+1. Install iOS dependencies:
+
+```bash
+cd ios
+pod install
+cd ..
+```
+
+2. Run the iOS version:
+
+```bash
 npm run ios
-
-# OR using Yarn
+# or
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+### Android Version
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+1. Ensure you have Android Studio and an Android emulator set up
 
-## Step 3: Modifying your App
+2. Run the Android version:
 
-Now that you have successfully run the app, let's modify it.
+```bash
+npm run android
+# or
+yarn android
+```
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## Usage
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+1. Place your audio file in the assets directory
+2. Update the audio file path in `App.tsx`
+3. Place your transcript JSON file in the assets directory
+4. Update the transcript file path in `App.tsx`
 
-## Congratulations! :tada:
+## Contributing
 
-You've successfully run and modified your React Native App. :partying_face:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-### Now what?
+## License
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project is licensed under the MIT License - see the LICENSE file for details.
